@@ -1,0 +1,54 @@
+app:
+  node_env: NODE_ENV
+  name: APP_NAME
+  port: APP_PORT
+  prefix: APP_PREFIX
+  jwt_access_token_secret: JWT_ACCESS_TOKEN_SECRET
+  jwt_access_token_expiration_time: JWT_ACCESS_TOKEN_EXPIRATION_TIME
+  jwt_refresh_token_secret: JWT_REFRESH_TOKEN_SECRET
+  jwt_refresh_token_expiration_time: JWT_REFRESH_TOKEN_EXPIRATION_TIME
+  web_url: FE_WEB_URL
+
+master:
+  type: mysql
+  host: MYSQL_HOST
+  port: MYSQL_PORT
+  username: MYSQL_USERNAME
+  password: MYSQL_PASSWORD
+  database: MYSQL_DATABASE
+  logging: false
+  extra:
+    connectionLimit: 10
+
+report:
+  type: mysql
+  host: REPORT_MYSQL_HOST
+  port: REPORT_MYSQL_PORT
+  username: REPORT_MYSQL_USERNAME
+  password: REPORT_MYSQL_PASSWORD
+  database: REPORT_MYSQL_DATABASE
+  logging: false
+  extra:
+    connectionLimit: 10
+
+redis:
+  host: REDIS_HOST
+  port: REDIS_PORT
+
+secret:
+  key: SECRET_KEY
+
+jwt_key:
+  private: JWT_PRIVATE_KEY_ENCODE
+  public: JWT_PUBLIC_KEY_ENCODE
+
+google:
+  clientID: GOOGLE_CLIENT_ID
+  clientSecret: GOOGLE_CLIENT_SECRET
+
+slack:
+  baseUrl: BASE_SLACK_API_URL
+  botToken: SLACK_BOT_TOKEN
+
+kafka:
+  brokers: KAFKA_BROKERS
